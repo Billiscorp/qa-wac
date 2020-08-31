@@ -1,30 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Practice</title>
+	<meta charset="UTF-8">
+	<title>Словарь тестировщика</title>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" >
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1 align="center">
-html practice
-</h1>
-<p align="center">
-Let's practice <b>html</b>
-</p>
-<table border="2" bordercolor="blue" background="yellow" width="300px">
-<th colspan="2">Choose your pet</th>
-<tr>
-  <td>cats</td>
-  <td>dogs</td>
-  </tr>
-<tr>
-  <td>snake</td>
-  <td>fish</td>
-</tr>
-</table>
-<br>
-<cite>Pets are our best friends</cite>
-<br>
-<br>
-<img src="https://images.app.goo.gl/Yyg9kgugy9wv74TV7" alt="cat" />
+	<header class="header">
+		
+				<img src="Debug-Int-feature.png" alt= "Bug" class="pic">
+				<h1>Словарь терминов</h1>
+	</header>
+				<div class="testing">
+				<p>
+					<b>Андерклокинг</b> — снижение частоты работы оборудования.
+				</p>
+				<p>
+					<b>Баг (дефект)</b> — недостаток компонента или системы, который может привести к отказу определенной функциональности.
+				</p>
+				<p>
+					<b>Приоритет багов</b> — важность той или иной ошибки в ПО:
+				<ul>
+					<li><b><i>Trivial</i></b> — косметическая малозаметная проблема.
+					</li>
+					<li><b><i>Minor</i></b> — очевидная, незначительная проблема.
+					</li>
+					<li><b><i>Major</i></b> — значительная проблема.
+					</li>
+					<li><b><i>Critical</i></b> — проблема, нарушающая работу c ключевыми функциями ПО.
+					</li>
+					<li><b><i>Blocker</i></b> — проблема, нарушающая функционирование ПО.
+					</li>
+				</ul>
+			</p>
+			<p><b>Баг-репорт</b> — документ, описывающий ситуацию или последовательность действий приведшую к некорректной работе объекта тестирования, с указанием причин и ожидаемого результата.
+			</p>
+			<p><b>Валидация</b> — определение соответствия разрабатываемого ПО ожиданиям и потребностям пользователя, требованиям к системе.
+			</p>
+			<p><b>Верификация</b> — процесс оценки системы или её компонентов с целью определения удовлетворяют ли результаты текущего этапа разработки условиям, сформированным в начале этого этапа.
+			</p>
+			<p><b>Спецификация</b> — детальное описание того, как должно работать ПО.
+			</p>
+			<p><b>Система отслеживания ошибок</b> (англ. bug tracking system) — программа учета и/или контроля багов:
+			<ol>
+				<li>Atlassian JIRA</li>
+				<li>Bugzilla</li>
+				<li>YouTrack</li>
+				<li>Redmine</li>
+				<li>etc.</li>
+			</ol>
+		</p>
+	</div>
+	<hr>
+	<div class="registration">
+		<h1>Регистрационная форма</h1>
+		 <form class="reg-form" method="get">
+		 	<div>
+		 	<label for="form_name">Введите Ваше имя: </label>
+       			 <input type="text" id="form_name" name="name" required="">
+       		</div>
+       	<br>
+       		<div>
+        	<label for="form_surname">Введите Вашу фамилию: </label>
+        		<input type="text" id="form_surname" name="surname" required="">
+        	</div>
+        <br>
+ 			<div>
+ 				<label for="form_date">Введите Вашу дату рождения: </label>
+ 			    <input id="date" type="date" id="form_date" name="date">
+ 			</div>
+        <br>
+        	<div class="form-row">
+        		<label for="sex">Ваш пол:</label>
+       			<label><input type="radio" value="male" id ="sex" name="sex">Мужской |</label> <label><input type="radio" value="female" id="sex" name="sex">Женский </label>
+       		</div>
+        <br>
+        	<div class="form-row">
+        		<label for="email">Введите Ваш электронный адрес: </label>
+      			  <input autocomplete="on" type="email" autofocus="" placeholder="me@example.com" id="email" name="email">
+      		</div>
+        <br>
+        	<div class="form-row">
+        		<label for="form_site">Введите Ваш сайт: </label>
+       			<input type="url" placeholder="http://example.com" id="form_site" name="url">
+       		</div>
+      	<br>
+       		<div class="form-row">
+       			<label for="form_range">Как сильно Вы хотите изучить тестирование ПО: </label>
+        		<input type="range" id="form_range" name="range" min="1" max="100" step="1" value="50">
+        	</div>
+        <br>
+        <p class="one">Загрузите Вашу фотографию: </p>
+        <input type="file" name="file" id="file">
+        <br>     
+       		<div class="form-row">
+       		<p>Как узнали о нас?</p>
+      		  <label><input type="checkbox" name="option1" value="value1" id="id1" checked<> Реклама </label>
+       		 <label><input type="checkbox" name="option2" value="value2" id="id2" checked<>Интернет </label>
+        	</div>
+        <br>
+        <p>Расскажите нам о себе</p>
+        <textarea name="comments">          
+        </textarea>
+      
+        <br>
+        <input type="reset" name="reset" value="Reset">
+        <input type="submit" name="submit" value="Submit">     
+        </form>
+	</div>
 </body>
 </html>
